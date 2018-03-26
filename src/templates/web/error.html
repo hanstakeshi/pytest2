@@ -1,0 +1,64 @@
+{% extends "common/_base.html" %}
+{% load static %}
+{% block cssadicional %}
+
+{% endblock %}
+
+{% block classbody %}{% endblock %}
+
+{% block content %}
+<div class="b16">
+	<div class="b16-main">
+		<div class="b16-inner">
+
+			<div class="wancho">
+				<div class="b16-text">
+					<h3 class="b16-title">404</h3>
+					<p>
+						Parece que ha habido un error con la página que estás buscando.
+					</p>
+					<p>
+						Es posible que en la entrada haya sido eliminado o que la dirección no exista
+					</p>
+					<a href="{% url 'web:home' %}" class="g-btn gris">
+						Ir a la página principal
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<div class="wancho">
+		<div class="b16-img">
+			<img src="{% static 'img/img-error.png' %}" width="155" height="214" alt="">
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block jsfinal %}
+
+<script type="text/javascript">
+	$(function(){
+		function fullscreen	(){
+			header = $('header').outerHeight();
+			footer = $('footer').outerHeight();
+			alto = $(window).height();
+			element = $('.b16').outerHeight();
+			vWidth = $(window).width();
+			if(vWidth>480){
+				$('.b16').height(alto-header-footer);
+			}else{
+				$('.b16').removeAttr('style');
+			}
+
+		}
+		fullscreen()
+		$(window).resize(function(event) {
+			fullscreen()
+		});
+
+	});
+</script>
+{% endblock %}

@@ -1,0 +1,48 @@
+// Colors idendity
+c-0 = #727277
+c-1 = #00aaa9
+c-2 = #393938
+c-3 = #a7a9ac
+c-4 = #000
+c-5 = #000
+c-6 = #000
+c-7 = #000
+c-8 = #000
+c-9 = #eee
+
+// Fonts
+t-0 = 'latoregular', sans-serif
+t-1 = 'latobold', sans-serif
+t-2 = 'nexa_boldregular', sans-serif
+t-3 = 'latobold_italic', sans-serif
+t-4 = 'arial', sans-serif 
+t-5 = 'arial', sans-serif
+
+icomoon = 'icomoon'
+
+// Mixins
+placeholder(color)
+	::-webkit-input-placeholder { color: color} /* WebKit */
+	:-moz-placeholder { color: color;} /* Firefox 18- */
+	::-moz-placeholder { color: color;  } /* Firefox 19+ */
+	:-ms-input-placeholder { color: color;  } /* IE 10+ */
+
+transition-all()
+	transition all 0.25s
+
+img-res()
+	width 100%
+	height auto
+	display block
+	
+background-t(color, alpha = 1)
+	ms-color = argb(color, alpha)
+	background rgba(color, alpha)
+	zoom 1
+	filter s('progid:DXImageTransform.Microsoft.gradient(startColorstr=%s,endColorstr=%s)', ms-color, ms-color) !important
+hex(decimal)
+	hex-value = ('0') ('1') ('2') ('3') ('4') ('5') ('6') ('7') ('8') ('9') ('A') ('B') ('C') ('D') ('E') ('F')
+	unquote(hex-value[floor(decimal / 16)] + hex-value[floor(decimal % 16)])
+
+argb(color, alpha = 1)
+	unquote('#') + hex(alpha * 255) + hex(red(color)) + hex(green(color)) + hex(blue(color))	

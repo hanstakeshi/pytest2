@@ -1,0 +1,16 @@
+{% extends 'common/_base.html' %}
+
+{% block content %}
+  <!-- content -->
+  <h1>Contacto</h1>
+
+  {% if form.is_valid %}
+    <h2>Gracias</h2>
+  {% else %}
+  <form action="{% url 'web:contactanos' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Enviar" />
+  </form>
+  {% endif %}
+{% endblock %}
