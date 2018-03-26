@@ -1,0 +1,4 @@
+{
+  "apps/web/test/test_models.py::TestPost::()::test_init": true, 
+  "apps/web/test/test_models.py::TestPost::()::test_model": true
+}

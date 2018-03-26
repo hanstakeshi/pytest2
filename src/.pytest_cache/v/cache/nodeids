@@ -1,0 +1,13 @@
+[
+  "apps/core/test/test_core_tags.py::CoreTagsTest::test_br", 
+  "apps/core/test/test_core_tags.py::CoreTagsTest::test_floatdot", 
+  "apps/core/test/test_core_tags.py::CoreTagsTest::test_get_item", 
+  "apps/core/test/test_core_tags.py::CoreTagsTest::test_get_range", 
+  "apps/core/test/test_core_tags.py::CoreTagsTest::test_split", 
+  "apps/core/test/test_core_tags.py::CoreTagsTest::test_tel", 
+  "apps/core/test/test_markup_tags.py::MarkupTagsTest::test_mark", 
+  "apps/core/test/test_util.py::UtilTest::test_log", 
+  "apps/core/test/test_util.py::UtilTest::test_util", 
+  "apps/core/test/test_util.py::UtilTest::test_youtube", 
+  "apps/web/test/test_models.py::TestPost::()::test_init"
+]

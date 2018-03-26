@@ -18,6 +18,30 @@ from filebrowser.fields import FileBrowseField
 log = getLogger('django')
 
 
+class Post(models.Model):
+    mensaje = models.TextField()
+
+    def __unicode__(self):
+        return u"Post"
+
+
+class ModelExample(models.Model):
+
+    img_example = FileBrowseField('Imagen Label',
+                                max_length=200, blank=True,
+                                extensions=['.jpg', '.png', '.gif'],
+                                directory='img_example')
+
+    rich_example = RichTextField("Example", blank=True)
+
+    class Meta:
+        verbose_name = "Model Exmaple"
+        verbose_name_plural = "Model Examples"
+
+    def __unicode__(self):
+        return u"Model Example"
+
+
 class InfoSite(AuditableModel):
     direccion = models.CharField('Dirección', max_length=120,
         help_text='Agregar // para generar el salto de línea')

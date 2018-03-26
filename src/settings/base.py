@@ -71,6 +71,8 @@ THIRD_PART_APPS = [
     'geoposition',
     'ckeditor',
     'ckeditor_uploader',
+    'pytest',
+    'mixer'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PART_APPS
